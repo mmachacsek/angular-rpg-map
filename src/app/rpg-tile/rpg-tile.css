@@ -1,0 +1,45 @@
+.tile {
+    display: grid;
+    grid-template-columns: 2px 5px auto 5px 2px;
+    grid-template-rows: 2px 5px auto 5px 2px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.center {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.center-solid {
+    background-color: black;
+}
+.center-dark {
+    background-color: lightgray;
+}
+.center-water {
+    background-color: lightskyblue;
+}
+
+.message::after {
+    content: "*";
+    font-size: x-small;
+    color: red;
+    vertical-align: top;
+}
+
+.wall {
+    background-color: black;
+}
+.door {
+    background-color: goldenrod !important;    
+}
+.passage {
+    background-color: white !important;    
+}

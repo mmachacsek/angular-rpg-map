@@ -1,0 +1,24 @@
+<div class="tile" [class]="getClasses()" [title]="isMessage() ? tile.message : ''">    
+    <!-- line 1 -->
+    <div [class]="{wall: isWall(tile.top) || isWall(tile.left)}"></div>
+    <div [class]="{wall: isWall(tile.top)}"></div>
+    <div [class]="{door: isDoor(tile.top), wall: isWall(tile.top), passage : isPassage(tile.top)}"></div>
+    <div [class]="{wall: isWall(tile.top)}"></div>
+    <div [class]="{wall: isWall(tile.top) || isWall(tile.right)}"></div>
+    <!-- line 2 -->
+    <div [class]="{wall: isWall(tile.left)}"></div>
+    <div class="center" [class]="{message: isMessage()}">{{getCenter()}}</div>
+    <div [class]="{wall: isWall(tile.right)}"></div>
+    <!-- line 3 -->
+    <div [class]="{door: isDoor(tile.left), wall: isWall(tile.left), passage : isPassage(tile.left)}"></div>    
+    <div [class]="{door: isDoor(tile.right), wall: isWall(tile.right), passage : isPassage(tile.right)}"></div>
+    <!-- line 4 -->
+    <div [class]="{wall: isWall(tile.left)}"></div>
+    <div [class]="{wall: isWall(tile.right)}"></div>
+    <!-- line 4 -->
+    <div [class]="{wall: isWall(tile.left) || isWall(tile.bottom)}"></div>
+    <div [class]="{wall: isWall(tile.bottom)}"></div>
+    <div [class]="{door: isDoor(tile.bottom), wall: isWall(tile.bottom), passage : isPassage(tile.bottom)}"></div>
+    <div [class]="{wall: isWall(tile.bottom)}"></div>
+    <div [class]="{wall: isWall(tile.right) || isWall(tile.bottom)}"></div>
+</div>

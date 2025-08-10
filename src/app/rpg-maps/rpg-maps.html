@@ -1,0 +1,11 @@
+<h2>Open Map</h2>
+@for (map of getMaps(); track $index) {
+    <a [routerLink]="['/maps/', map]">{{map}}</a>
+    <br/>
+}
+<br/>
+<h2>Create Map</h2>
+<input id="name" [formControl]="nameControl" placeholder="Map name">
+<button (click)="create()">Create</button>
+
+<input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>

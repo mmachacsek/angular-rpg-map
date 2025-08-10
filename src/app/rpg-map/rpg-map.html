@@ -1,0 +1,5 @@
+<h2>{{name}}</h2>
+@if(name && map) {
+    <rpg-grid [name]="name" [map]="map"></rpg-grid>
+    <rpg-menu [name]="name" [map]="map"></rpg-menu>
+}

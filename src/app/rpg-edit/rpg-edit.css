@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fields {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.fields input {
+    width: 1em;
+}
+
+.edit {
+    display: grid;
+    grid-template-columns: repeat(3, 30px);
+    grid-template-rows: repeat(3, 30px);
+    border: solid 1px black;
+    text-align: center;
+}
+
+#message {
+    width: 15em;
+}

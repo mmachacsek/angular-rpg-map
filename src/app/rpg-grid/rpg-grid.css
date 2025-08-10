@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(calc(var(--css-cols) + 2), 30px);
+    grid-template-rows: repeat(calc(var(--css-rows) + 2), 30px);
+    border: solid 1px black;
+}
+
+.selected {
+    background-color: aqua !important;
+}
+
+.coord {
+    text-align: center;
+    vertical-align: middle;
+    border: dashed 1px lightgrey;
+}
+
+.clickable:hover {
+    text-decoration: underline;
+}
+

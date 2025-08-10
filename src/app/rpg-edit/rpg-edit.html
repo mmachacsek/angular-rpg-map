@@ -1,0 +1,36 @@
+ <div class="container">
+    <div class="edit">
+        <div></div>
+        <div (click)="toggleTop()">X</div>
+        <div></div>
+        <div (click)="toggleLeft()">X</div>
+        <rpg-tile [tile]="tile" (click)="toggleCenter()"></rpg-tile>
+        <div (click)="toggleRight()">X</div>
+        <div></div>
+        <div (click)="toggleBottom()">X</div>
+        <div></div>
+    </div>         
+    <div class="fields" title="Center">
+        <input (click)="setField('.')" value="." maxlength="1" readonly="readonly">
+        <input (click)="setField('↑')" value="↑" maxlength="1" readonly="readonly">
+        <input (click)="setField('↓')" value="↓" maxlength="1" readonly="readonly">
+        <input (click)="setField('▲')" value="▲" maxlength="1" readonly="readonly">
+        <input (click)="setField('▼')" value="▼" maxlength="1" readonly="readonly">
+        <input (click)="setField('↕')" value="↕" maxlength="1" readonly="readonly">
+        <input (click)="setField('🕳')" value="🕳" maxlength="1" readonly="readonly">
+        <input (click)="setField('⚿')" value="⚿" maxlength="1" readonly="readonly">
+        <input (click)="setField('⟳')" value="⟳" maxlength="1" readonly="readonly">
+        <input (click)="setField('⚠')" value="⚠" maxlength="1" readonly="readonly">
+        <input (click)="setField('👤')" value="👤" maxlength="1" readonly="readonly">
+    </div>
+    <div class="fields" title="Center">
+        <input id="field" [formControl]="fieldControl" maxlength="2"/>
+    </div>
+    <span title="Message">
+        <input id="message" [formControl]="messageControl" maxlength="100">
+    </span>
+    <span>
+        <button (click)="erase()">Erase</button>
+    </span>
+</div>
+

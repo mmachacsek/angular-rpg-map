@@ -1,0 +1,52 @@
+<table>
+    <tr>
+        <td>
+            <div class="container">
+                <div class="grid">
+                    <div class="coord clickable" (click)="addColLeft()">←</div>    
+                    @for (col of getCols(); track $index) {                        
+                        @if( $index == 0) {
+                            <div class="coord clickable" (click)="removeColLeft()">→</div>    
+                        } @else {
+                            <div class="coord">{{col}}</div>
+                        }
+                    }
+                    <div class="coord clickable" (click)="addRow()">↑</div>
+                    @for (row of getRows(); track $index) {
+                        @if( $index == rows - 1) {
+                            <div class="coord clickable" (click)="removeRowBottom()">↑</div>    
+                        } @else {
+                            <div class="coord">{{row}}</div>
+                        }
+                        @for (col of getCols(); track $index) {
+                            <rpg-tile [tile]="getTile(row, col)" (click)="selectTile(getTile(row, col))" [class]="{selected: getTile(row, col) == selected}"></rpg-tile>
+                        }
+                        @if( $index == 0) {
+                            <div class="coord clickable" (click)="removeRow()">↓</div>    
+                        } @else {
+                            <div class="coord">{{row}}</div>
+                        }
+                    }
+                    <div class="coord clickable"  (click)="addRowBottom()">↓</div>
+                    @for (col of getCols(); track $index) {
+                        @if( $index == cols-1) {
+                            <div class="coord clickable" (click)="removeCol()">←</div>    
+                        } @else {
+                            <div class="coord">{{col}}</div>
+                        }
+                    }
+                    <div class="coord clickable" (click)="addCol()">→</div>
+                </div>   
+            </div>
+        </td>
+        <td>
+@if( selected ) {
+            <rpg-edit [tile]="selected"></rpg-edit>
+} 
+        </td>
+    </tr>
+</table>
+<br/>
+<button (click)="rescale()">Rescale</button>&nbsp;
+
+
