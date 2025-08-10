@@ -27,6 +27,10 @@
           },
           "configurations": {
             "production": {
+              "outputPath": {
+                "base": "dist/angular-rpg-map",
+                "browser": ""
+              },
               "budgets": [
                 {
                   "type": "initial",

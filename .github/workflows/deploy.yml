@@ -21,7 +21,10 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npx ng build --base-href "/angular-rpg-map/"
+        run: npx ng build --configuration production --base-href "/angular-rpg-map/"
+
+      - name: Copy index.html to 404.html
+        run: cp dist/angular-rpg-map/index.html dist/angular-rpg-map/404.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
