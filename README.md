@@ -1,60 +1,42 @@
 # angular-rpg-map
-Angular RPG Map Editor
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+**Angular RPG Map Editor**
 
-## Development server
+A web-based map editor for classic RPGs, built with Angular. Easily create, edit, and visualize dungeon maps for games like Wizardry. Supports importing, exporting, and managing multiple map files.
 
-To start a local development server, run:
+## Features
+
+- **Interactive Map Editing:** Draw, modify, and annotate dungeon maps directly in your browser.
+- **Multi-Game Support:** Organize maps for different RPGs (e.g., Wizardry 1, Wizardry 6).
+- **Import/Export:** Save maps as JSON files and load existing maps for editing.
+- **Customizable Tiles:** Add walls, doors, notes, and other features to each map cell.
+- **Easy Setup:** No backend required—just open in your browser.
+
+## Getting Started
+
+### Development Server
+
+Start a local development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Visit [http://localhost:4200/](http://localhost:4200/) in your browser. The app reloads automatically on code changes.
 
-## Code scaffolding
+### Building
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Compile the project and output files to `dist/`:
 
 ```bash
 ng build
 ```
+## Folder Structure
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- `maps/` — Contains sample and user-created map files organized by game.
+- `public/` — Static assets (favicon, etc.).
+- `src/app/` — Main application source code.
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli)
