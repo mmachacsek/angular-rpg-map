@@ -14,6 +14,8 @@ A web-based map editor for classic RPGs, built with Angular. Easily create, edit
 
 ## Getting Started
 
+A public instance is served via GitHub pages at: [https://mmachacsek.github.io/angular-rpg-map/](https://mmachacsek.github.io/angular-rpg-map/)
+
 ### Development Server
 
 Start a local development server:
